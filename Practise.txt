@@ -1,0 +1,38 @@
+--####################################################################
+--PROJECTION
+--1} WAQTD ENAME Along with JOB and HIREDATE
+SELECT ENAME, JOB, HIREDATE
+FROM EMP;
+
+--2}WAQTD ENAME , COMM and SAL with 300RS Incentive
+--Incentives not to add on the annual sal add on the monthly
+SELECT ENAME, COMM, SAL + 300 "Incentives Sal"
+FROM EMP;
+
+--3}WAQTD ENAME, JOB, SAL OF Employ with 500RS bonus 
+--Add bonus on the annual income
+SELECT ENAME, JOB, (SAL * 12) + 500 "500 bonus"
+FROM EMP
+
+--4} WAQTD Details of All the Emps
+SELECT * 
+FROM EMP;
+
+--5} WAQTD Details of an Emp along with Annual Sal
+-- EMP detail along with annual sal  "EMP.*"
+SELECT EMP.*, SAL * 12 "Annual Sal"
+FROM EMP; 
+
+--#####################################################################
+--SELECTION 
+--1}WAQTD Details of an emp if the emp name is 'king' ?
+SELECT * 
+FROM EMP
+WHERE ENAME = 'KING';
+
+--2}WAQTD Emp name and job if the emp is working as a salseman ?
+SELECT ENAME, JOB
+FROM EMP
+WHERE JOB = 'SALESMAN';
+
+--######################################################################
